@@ -1,10 +1,11 @@
 package reactsocket
 
 import (
-	"goreact"
 	"log"
 	"net/http"
-	"wsocket"
+
+	"github.com/benji-bou/goreact"
+	"github.com/benji-bou/wsocket"
 )
 
 func ConnectSocket(addr string) (*wsocket.Socket, *goreact.Signal, error) {
