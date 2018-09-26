@@ -36,7 +36,6 @@ func incomingEvent(cl *wsocket.Socket) *goreact.Signal {
 					i.SendCompleted()
 					break L
 				}
-				log.Println("Send Event")
 				i.SendNext(event)
 			case err, ok := <-cl.GetError():
 				if ok == false {
