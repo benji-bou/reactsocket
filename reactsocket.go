@@ -1,11 +1,12 @@
 package reactsocket
 
 import (
+	"context"
 	"log"
 	"net/http"
 
-	" github.com/reactivex/rxgo/v2"
 	"github.com/benji-bou/wsocket"
+	"github.com/reactivex/rxgo/v2"
 )
 
 func ConnectSocket(addr string) (*wsocket.Socket, rxgo.Observable, error) {
@@ -35,7 +36,7 @@ func incomingEvent(cl *wsocket.Socket) rxgo.Observable {
 					log.Println("completed")
 					break L
 				}
-				next <- rxgo.of(event)
+				next <- rxgo.Of(event)
 			case err, ok := <-cl.GetError():
 				if ok == false {
 					log.Println("Send Completed")
