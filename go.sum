@@ -1,0 +1,8 @@
+github.com/benji-bou/goreact v0.0.0-20190923093122-a6d53d78e7b7 h1:AxEFImqktqxFCUZArJS57mAfaLK8C/1s1F7wtU1iivE=
+github.com/benji-bou/goreact v0.0.0-20190923093122-a6d53d78e7b7/go.mod h1:Gea51moRIi2ZJnh5o10/ZJ1Ntp3vOUDVbyDpkUoyUtQ=
+github.com/benji-bou/wsocket v0.0.0-20190904195248-78eecdbe8f06 h1:4cYh36XdVfVHyqvfdTaGZfFZ3rPz1u9eLNwl4sWHz14=
+github.com/benji-bou/wsocket v0.0.0-20190904195248-78eecdbe8f06/go.mod h1:gOUD0XO6sCi8UeW7pdTtbtBbguECMc86a1TEjT5lSoE=
+github.com/gorilla/websocket v1.4.1 h1:q7AeDBpnBk8AogcD4DSag/Ukw/KV+YhzLj2bP5HvKCM=
+github.com/gorilla/websocket v1.4.1/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
+github.com/satori/go.uuid v1.2.1-0.20181028125025-b2ce2384e17b h1:gQZ0qzfKHQIybLANtM3mBXNUtOfsCFXeTsnBqCsx1KM=
+github.com/satori/go.uuid v1.2.1-0.20181028125025-b2ce2384e17b/go.mod h1:dA0hQrYB0VpLJoorglMZABFdXlWrHn1NEOzdhQKdks0=
