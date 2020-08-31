@@ -48,5 +48,5 @@ func incomingEvent(cl *wsocket.Socket) rxgo.Observable {
 				}
 			}
 		}
-	}})
+	}}, rxgo.WithPublishStrategy())
 }
