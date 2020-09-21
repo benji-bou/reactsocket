@@ -8,6 +8,8 @@ github.com/anacrolix/missinggo/perf v1.0.0/go.mod h1:ljAFWkBuzkO12MQclXzZrosP5ur
 github.com/anacrolix/tagflag v0.0.0-20180109131632-2146c8d41bf0/go.mod h1:1m2U/K6ZT+JZG0+bdMK6qauP49QT4wE5pmhJXOKKCHw=
 github.com/benji-bou/wsocket v0.1.1 h1:1JW7+OmxyrNzbH3eT0MVtqSctVlQXrhNBeNx2kRTTWY=
 github.com/benji-bou/wsocket v0.1.1/go.mod h1:hkpNzc+u+d5MxewUAbpj32SjD02C/afz9HgLHXqGBZs=
+github.com/benji-bou/wsocket v0.1.2 h1:QecYk6FYZ/T+TFdNg/onANn8Ghf9rH7SXGJTNUwt/z4=
+github.com/benji-bou/wsocket v0.1.2/go.mod h1:8Bjnrxr7GBQuayh3FQXn3kLatRf6559KFHRB+uT6Vm4=
 github.com/bradfitz/iter v0.0.0-20140124041915-454541ec3da2/go.mod h1:PyRFw1Lt2wKX4ZVSQ2mk+PeDa1rxyObEDlApuIsUKuo=
 github.com/bradfitz/iter v0.0.0-20190303215204-33e6a9893b0c/go.mod h1:PyRFw1Lt2wKX4ZVSQ2mk+PeDa1rxyObEDlApuIsUKuo=
 github.com/cenkalti/backoff/v4 v4.0.0 h1:6VeaLF9aI+MAUQ95106HwWzYZgJJpZ4stumjj6RFYAU=
