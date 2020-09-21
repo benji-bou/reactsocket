@@ -22,7 +22,9 @@ func AcceptSocket(w http.ResponseWriter, r *http.Request) (*wsocket.Socket, rxgo
 	if err != nil {
 		return nil, nil, err
 	}
-	return cl, incomingEvent(cl), nil
+	obs := incomingEvent(cl)
+	obs.Connect()
+	return cl, obs, nil
 }
 
 func incomingEvent(cl *wsocket.Socket) rxgo.Observable {
@@ -31,22 +33,22 @@ func incomingEvent(cl *wsocket.Socket) rxgo.Observable {
 	L:
 		for {
 			select {
-			case event, ok := <-cl.GetRead():
+			case event, ok := <-cl.Read():
 				if ok == false {
 					log.Println("completed")
 					break L
 				}
 				next <- rxgo.Of(event)
-			case err, ok := <-cl.GetError():
+			case err, ok := <-cl.Error():
 				if ok == false {
 					log.Println("Send Completed")
 					break L
 				} else {
 					log.Println("Send failed", err)
 					next <- rxgo.Error(err)
-					return
+					break L
 				}
 			}
 		}
-	}}, rxgo.WithPublishStrategy())
+	}}, rxgo.WithPublishStrategy(), rxgo.WithBufferedChannel(1))
 }
