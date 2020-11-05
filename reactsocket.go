@@ -23,7 +23,7 @@ func AcceptSocket(w http.ResponseWriter, r *http.Request) (*wsocket.Socket, rxgo
 		return nil, nil, err
 	}
 	obs := incomingEvent(cl)
-	obs.Connect()
+	obs.Connect(context.Background())
 	return cl, obs, nil
 }
 
