@@ -46,9 +46,11 @@ func incomingEvent(cl *wsocket.Socket) rxgo.Observable {
 				} else {
 					log.Println("Send failed", err)
 					next <- rxgo.Error(err)
+					log.Println("Error propagated")
 					break L
 				}
 			}
 		}
+		cl.Close()
 	}}, rxgo.WithPublishStrategy(), rxgo.WithBufferedChannel(1))
 }
