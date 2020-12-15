@@ -14,7 +14,9 @@ func ConnectSocket(addr string) (*wsocket.Socket, rxgo.Observable, error) {
 	if err != nil {
 		return nil, nil, err
 	}
-	return cl, incomingEvent(cl), nil
+	obs := incomingEvent(cl)
+	obs.Connect(context.Background())
+	return cl, obs, nil
 }
 
 func AcceptSocket(w http.ResponseWriter, r *http.Request) (*wsocket.Socket, rxgo.Observable, error) {
@@ -49,8 +51,8 @@ func incomingEvent(cl *wsocket.Socket) rxgo.Observable {
 					log.Println("Error propagated")
 					break L
 				}
+
 			}
 		}
-		cl.Close()
 	}}, rxgo.WithPublishStrategy(), rxgo.WithBufferedChannel(1))
 }
