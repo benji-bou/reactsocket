@@ -2,7 +2,6 @@ package reactsocket
 
 import (
 	"context"
-	"log"
 	"net/http"
 
 	"github.com/benji-bou/wsocket"
@@ -37,22 +36,18 @@ func incomingEvent(cl *wsocket.Socket) rxgo.Observable {
 			select {
 			case event, ok := <-cl.Read():
 				if ok == false {
-					log.Println("completed")
 					break L
 				}
 				next <- rxgo.Of(event)
 			case err, ok := <-cl.Error():
 				if ok == false {
-					log.Println("Send Completed")
 					break L
 				} else {
-					log.Println("Send failed", err)
 					next <- rxgo.Error(err)
-					log.Println("Error propagated")
 					break L
 				}
 
 			}
 		}
-	}}, rxgo.WithPublishStrategy(), rxgo.WithBufferedChannel(1))
+	}}, rxgo.WithPublishStrategy(), rxgo.WithObservationStrategy(rxgo.Eager))
 }
