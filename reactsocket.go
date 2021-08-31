@@ -8,8 +8,8 @@ import (
 	"github.com/reactivex/rxgo/v2"
 )
 
-func ConnectSocket(addr string) (*wsocket.Socket, rxgo.Observable, error) {
-	cl, err := wsocket.ConnectSocket(addr)
+func ConnectSocket(addr string, header http.Header) (*wsocket.Socket, rxgo.Observable, error) {
+	cl, err := wsocket.ConnectSocket(addr, header)
 	if err != nil {
 		return nil, nil, err
 	}
