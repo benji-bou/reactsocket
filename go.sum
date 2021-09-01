@@ -10,6 +10,8 @@ github.com/benji-bou/wsocket v0.1.6 h1:sgzSX5uSIciJJI38Zd14mPOqfVcWg7y1qpZrQ+zrz
 github.com/benji-bou/wsocket v0.1.6/go.mod h1:AR73xVEGv9gp3Wo/7sqU7rlx9xwH8aTQCWnb6paRzrA=
 github.com/benji-bou/wsocket v0.1.7 h1:xzDAzDS4g0ka4NFf+3r6bTQxO0dcnp3cAAcnRTrNkkE=
 github.com/benji-bou/wsocket v0.1.7/go.mod h1:AR73xVEGv9gp3Wo/7sqU7rlx9xwH8aTQCWnb6paRzrA=
+github.com/benji-bou/wsocket v0.1.8 h1:GSB6GVJc+bYzQ2V7KaMxAI3KkVtLfgrEKgzN79F1LkU=
+github.com/benji-bou/wsocket v0.1.8/go.mod h1:AR73xVEGv9gp3Wo/7sqU7rlx9xwH8aTQCWnb6paRzrA=
 github.com/bradfitz/iter v0.0.0-20140124041915-454541ec3da2/go.mod h1:PyRFw1Lt2wKX4ZVSQ2mk+PeDa1rxyObEDlApuIsUKuo=
 github.com/bradfitz/iter v0.0.0-20190303215204-33e6a9893b0c/go.mod h1:PyRFw1Lt2wKX4ZVSQ2mk+PeDa1rxyObEDlApuIsUKuo=
 github.com/cenkalti/backoff/v4 v4.0.0/go.mod h1:eEew/i+1Q6OrCDZh3WiXYv3+nJwBASZ8Bog/87DQnVg=
